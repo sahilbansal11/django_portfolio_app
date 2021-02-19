@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio - Project</title>
+</head>
+<body>
+
+  <div class="projects-title">
+    <h1>
+      <center>
+        My Projects
+      </center>
+    </h1>
+  </div>
+
+  <!-- Loop over all the project -->
+  <!-- name of the key in the context is all_my_projects -->
+  {% for prj in all_my_projects %}
+    <h2>
+      <center>
+        <a href="/project/{{prj.id}}">
+          {{ prj.name }}
+        </a>
+      </center>
+    </h2>
+  <!-- End the for loop -->
+  {% endfor %}
+
+</body>
+</html>
